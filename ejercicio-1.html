@@ -59,6 +59,7 @@
     <script>
     //al ingresar un valor en el input este se asigna como valor al id correspondiente
         $("#sujeto").keyup(function(){
+            //en el caso de que el input este vacio se le asigna el valor del data
             if($("#sujeto").val() == ""){
                 $(".elSujeto").html($(".elSujeto").data('sujeto'));
             }else{
@@ -66,6 +67,7 @@
             }
         });
         $("#verbo").keyup(function(){
+            //en el caso de que el input este vacio se le asigna el valor del data
             if($("#verbo").val() == ""){
                 $(".elVerbo").html($(".elVerbo").data('verbo'));
             }else{
@@ -73,6 +75,7 @@
             }
         });
         $("#adjetivo").keyup(function(){
+            //en el caso de que el input este vacio se le asigna el valor del data
             if($("#adjetivo").val() == ""){
                 $(".elAdjetivo").html($(".elAdjetivo").data('adjetivo'));
             }else{
@@ -80,6 +83,7 @@
             }
         });
         $("#sustantivo").keyup(function(){
+            //en el caso de que el input este vacio se le asigna el valor del data
             if($("#sustantivo").val() == ""){
                 $("#elSustantivo").html($("#elSustantivo").data('sustantivo'));
             }else{
