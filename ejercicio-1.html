@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 mt-3">
+                <h1>Formulario de frase</h1>
+                <p><span class="elSujeto" data-sujeto="Juan">Juan</span> <span class="elVerbo" data-verbo="se sentia">se sentía</span> <span
+                        class="elAdjetivo" data-adjetivo="solo">solo</span>, volvía a su <span id="elSustantivo" data-sustantivo="departamento">departamento</span>, y el
+                    silencio era el único que lo esperaba. <span class="elSujeto">Juan</span> <span
+                        class="elVerbo">estaba</span> <span class="elAdjetivo">triste</span>, <span
+                        class="elSujeto">Juan</span> <span class="elVerbo">estaba</span> <span class="elAdjetivo">solo</span>,
+                    muy <span class="elAdjetivo">solo</span>. Y <span class="elSujeto">Juan</span> tuvo una brillante idea:
+                    <span id="laIdea"></span></p>
+                <form id="penitencia-form">
+                    <form>
+                        <div class="mb-3">
+                            <label for="sujeto">Sujeto:</label>
+                            <input type="text" class="form-control" id="sujeto" name="sujeto"
+                                placeholder="Ingresa un sujeto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="verbo">Verbo:</label>
+                            <input type="text" class="form-control" id="verbo" name="verbo"
+                                placeholder="Ingresa un verbo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="adjetivo">Adjetivo calificativo:</label>
+                            <input type="text" class="form-control" id="adjetivo" name="adjetivo"
+                                placeholder="Ingresa un adjetivo calificativo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="sustantivo">Sustantivo:</label>
+                            <input type="text" class="form-control" id="sustantivo" name="sustantivo"
+                                placeholder="Ingresa un sustantivo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="idea">Idea:</label>
+                            <input type="text" class="form-control" id="idea" name="idea"
+                                placeholder="Ingresa una idea">
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script>
+    //al ingresar un valor en el input este se asigna como valor al id correspondiente
+        $("#sujeto").keyup(function(){
+            if($("#sujeto").val() == ""){
+                $(".elSujeto").html($(".elSujeto").data('sujeto'));
+            }else{
+                $(".elSujeto").html($("#sujeto").val());
+            }
+        });
+        $("#verbo").keyup(function(){
+            if($("#verbo").val() == ""){
+                $(".elVerbo").html($(".elVerbo").data('verbo'));
+            }else{
+                $(".elVerbo").html($("#verbo").val());
+            }
+        });
+        $("#adjetivo").keyup(function(){
+            if($("#adjetivo").val() == ""){
+                $(".elAdjetivo").html($(".elAdjetivo").data('adjetivo'));
+            }else{
+                $(".elAdjetivo").html($("#adjetivo").val());
+            }
+        });
+        $("#sustantivo").keyup(function(){
+            if($("#sustantivo").val() == ""){
+                $("#elSustantivo").html($("#elSustantivo").data('sustantivo'));
+            }else{
+                $("#elSustantivo").html($("#sustantivo").val());
+            }
+        });
+        $("#idea").keyup(function(){
+                $("#laIdea").html($("#idea").val());
+        });
+    </script>
+</body>
+</html>
