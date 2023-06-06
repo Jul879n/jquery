@@ -19,16 +19,15 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
         <script>
-            //aqui va el codigo
             $(document).ready(function () {
                 $('#agregar').click(function () {
                     //se crea un div con las propiedades correspondientes
-                    var nuevoDiv = $('<div class="m-2 caja" style="width:200px;height:200px;background:blue;"></div>')
-                    //se agrega el div dentro del row
+                    var nuevoDiv = $('<div class="m-2 caja rounded-1" style="width:200px;height:200px;background:blue;"></div>')
+                    //se agrega el div dentro del container
                     $('.container').append(nuevoDiv);
                 });
                 $('#limpiar').click(function () {
-                    // Elimina todos los DIV con la clase caja
+                    // Elimina todos los div con la clase caja
                     $('.caja').remove();
                 });
             });
