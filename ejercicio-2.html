@@ -30,9 +30,9 @@
         crossorigin="anonymous"></script>
         <script>
             $(document).ready(function () {
+                //se crea un div con las propiedades correspondientes
+                var nuevo = '<div class="col-6 col-sm-4 caja d-flex justify-content-center"><div class="azul m-2 rounded-1"></div></div>';
                 $('#agregar').click(function () {
-                    //se crea un div con las propiedades correspondientes
-                    var nuevo = '<div class="col-6 col-sm-4 caja d-flex justify-content-center"><div class="azul m-2 rounded-1"></div></div>';
                     //se agrega el div dentro del row
                     $('.row').append(nuevo);
                 });
