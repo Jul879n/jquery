@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="caja" class="m-2 rounded-1" style="width:200px;height:200px;background:blue;"></div>
+        <div class="row">
+            <div class="col-6">
+                <h1>Cambiar tamaño</h1>
+                <form id="medidas">
+                    <div class="mb-3">
+                        <label for="alto">Alto:</label>
+                        <input type="number" min="0" class="form-control" id="alto" name="alto" placeholder="Ingresa el alto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ancho">Ancho:</label>
+                        <input type="number" min="0" class="form-control" id="ancho" name="ancho" placeholder="Ingresa el ancho">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <script>
+            $("#alto").keyup(function () {
+                //si alto no tiene valor la altura sera de 200px
+                if ($("#alto").val() == "") {
+                    $("#caja").height(200);
+                //en el caso contrario se asigna el valor ingresado
+                } else {
+                    $("#caja").height($("#alto").val());
+                }
+            });
+            $("#ancho").keyup(function () {
+                //si el ancho no tiene valor el ancho sera de 200px
+                if ($("#ancho").val() == "") {
+                    $("#caja").width(200);
+                //en el caso contrario se asigna el valor ingresado
+                } else {
+                    $("#caja").width($("#ancho").val());
+                }
+            });
+        </script>
+</body>
+
+</html>
