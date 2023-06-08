@@ -20,61 +20,6 @@
             border: 5px solid;
             border-color: red;
         }
-        .uno {
-            width: 300px;
-            height: 160px;
-            background: green;
-            border: 5px solid;
-            border-color: blueviolet;
-        }
-
-        .dos {
-            width: 320px;
-            height: 1620px;
-            background: blue;
-            border: 5px solid;
-            border-color: greenyellow;
-        }
-
-        .tres {
-            width: 30px;
-            height: 120px;
-            background: gold;
-            border: 5px solid;
-            border-color: cornflowerblue;
-        }
-
-        .cuatro {
-            width: 20px;
-            height: 400px;
-            background: orange;
-            border: 5px solid;
-            border-color: sienna;
-        }
-
-        .cinco {
-            width: 300px;
-            height: 140px;
-            background: aqua;
-            border: 5px solid;
-            border-color: crimson;
-        }
-
-        .seis {
-            width: 420px;
-            height: 520px;
-            background: gray;
-            border: 5px solid;
-            border-color: lightcyan;
-        }
-
-        .siete {
-            width: 490px;
-            height: 620px;
-            background: darkblue;
-            border: 5px solid;
-            border-color: slateblue;
-        }
     </style>
 </head>
 
@@ -132,44 +77,72 @@
             $("#uno").click(function () {
                 $("#caja").removeClass();
 		        $("#caja").addClass('uno');
+                $(".uno").css('background-color', 'green');
+                $(".uno").css('border', '5px solid blueviolet');
+                $(".uno").css('width', '300px');
+                $(".uno").css('height', '160px');
             });
             $("#dos").click(function () {
                 $("#caja").removeClass();
 		        $("#caja").addClass('dos');
+                $(".dos").css('background-color', 'blue');
+                $(".dos").css('border', '5px solid greenyellow');
+                $(".dos").css('width', '320px');
+                $(".dos").css('height', '1620px');
             });
             $("#tres").click(function () {
                 $("#caja").removeClass();
 		        $("#caja").addClass('tres');
+                $(".tres").css('background-color', 'gold');
+                $(".tres").css('border', '5px solid cornflowerblue');
+                $(".tres").css('width', '30px');
+                $(".tres").css('height', '120px');
             });
             $("#cuatro").click(function () {
                 $("#caja").removeClass();
 		        $("#caja").addClass('cuatro');
+                $(".cuatro").css('background-color', 'orange');
+                $(".cuatro").css('border', '5px solid sienna');
+                $(".cuatro").css('width', '20px');
+                $(".cuatro").css('height', '400px');
             });
             $("#cinco").click(function () {
                 $("#caja").removeClass();
 		        $("#caja").addClass('cinco');
+                $(".cinco").css('background-color', 'aqua');
+                $(".cinco").css('border', '5px solid crimson');
+                $(".cinco").css('width', '300px');
+                $(".cinco").css('height', '140px');
             });
             $("#seis").click(function () {
                 $("#caja").removeClass();
 		        $("#caja").addClass('seis');
+                $(".seis").css('background-color', 'gray');
+                $(".seis").css('border', '5px solid lightcyan');
+                $(".seis").css('width', '420px');
+                $(".seis").css('height', '140px');
             });
             $("#siete").click(function () {
                 $("#caja").removeClass();
 		        $("#caja").addClass('siete');
+                $(".siete").css('background-color', 'darkblue');
+                $(".siete").css('border', '5px solid slateblue');
+                $(".sesieteis").css('width', '490px');
+                $(".siete").css('height', '620px');
             });
             $("#restaurar").click(function () {
                 $("#caja").removeClass();
+		        $("#caja").addClass('caja');
                 $(".caja").css('background-color', 'red');
                 $(".caja").css('border-color', 'red');
                 $(".caja").css('height', '200px');
                 $(".caja").css('width', '200px');
-		        $("#caja").addClass('caja');
             });
             $("#cambiar").click(function () {
-                $(".caja").css('background-color', $("#fondo").val());
-                $(".caja").css('border-color', $("#borde").val());
-                    $(".caja").css('height', $("#alto").val() + 'px');
-                    $(".caja").css('width', $("#ancho").val() + 'px');
+                $("#caja").css('background-color', $("#fondo").val());
+                $("#caja").css('border-color', $("#borde").val());
+                    $("#caja").css('height', $("#alto").val() + 'px');
+                    $("#caja").css('width', $("#ancho").val() + 'px');
                 
             });
         });
