@@ -158,11 +158,12 @@
 		        $("#caja").addClass('siete');
             });
             $("#restaurar").click(function () {
+                $("#caja").removeClass();
                 $(".caja").css('background-color', 'red');
                 $(".caja").css('border-color', 'red');
                 $(".caja").css('height', '200px');
                 $(".caja").css('width', '200px');
-                $("#caja").toggleClass('caja');
+		        $("#caja").addClass('caja');
             });
             $("#cambiar").click(function () {
                 $(".caja").css('background-color', $("#fondo").val());
