@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 4 jQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        .caja {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border: 5px solid;
+            border-color: red;
+        }
+        .uno {
+            width: 300px;
+            height: 160px;
+            background: green;
+            border: 5px solid;
+            border-color: blueviolet;
+        }
+
+        .dos {
+            width: 320px;
+            height: 1620px;
+            background: blue;
+            border: 5px solid;
+            border-color: greenyellow;
+        }
+
+        .tres {
+            width: 30px;
+            height: 120px;
+            background: gold;
+            border: 5px solid;
+            border-color: cornflowerblue;
+        }
+
+        .cuatro {
+            width: 20px;
+            height: 400px;
+            background: orange;
+            border: 5px solid;
+            border-color: sienna;
+        }
+
+        .cinco {
+            width: 300px;
+            height: 140px;
+            background: aqua;
+            border: 5px solid;
+            border-color: crimson;
+        }
+
+        .seis {
+            width: 420px;
+            height: 520px;
+            background: gray;
+            border: 5px solid;
+            border-color: lightcyan;
+        }
+
+        .siete {
+            width: 490px;
+            height: 620px;
+            background: darkblue;
+            border: 5px solid;
+            border-color: slateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Cambiar Diseño</h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="fondo">Color de fondo:</label>
+                        <input type="color" class="form-control" id="fondo" name="fondo"
+                            placeholder="Ingresa el color de fondo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="borde">color de borde:</label>
+                        <input type="color" class="form-control" id="borde" name="borde"
+                            placeholder="Ingresa el color del borde">
+                    </div>
+                    <div class="mb-3">
+                        <label for="alto">Altura:</label>
+                        <input type="text" class="form-control" id="alto" name="alto"
+                            placeholder="Ingresa el alto en px">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ancho">Ancho de la caja:</label>
+                        <input type="number" min="0" class="form-control" id="ancho" name="ancho"
+                            placeholder="Ingresa el ancho en px">
+                    </div>
+                    <div class="mb-3">
+                        <p>Estilos predefinidos:</p>
+                        <a id="uno" class="btn btn-secondary mt-2">Opcion 1</a>
+                        <a id="dos" class="btn btn-secondary mt-2">Opcion 2</a>
+                        <a id="tres" class="btn btn-secondary mt-2">Opcion 3</a>
+                        <a id="cuatro" class="btn btn-secondary mt-2">Opcion 4</a>
+                        <a id="cinco" class="btn btn-secondary mt-2">Opcion 5</a>
+                        <a id="seis" class="btn btn-secondary mt-2">Opcion 6</a>
+                        <a id="siete" class="btn btn-secondary mt-2">Opcion 7</a>
+                    </div>
+                    <a id="cambiar" name="cambiar" class="btn btn-primary">Cambiar</a>
+                    <a id="restaurar" name="restaurar" class="btn btn-primary">Restaurar</a>
+                </form>
+            </div>
+        </div>
+        <div class="mt-2">
+            <div id="caja" class="caja"></div>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#uno").click(function () {
+                $("#caja").removeClass();
+		        $("#caja").addClass('uno');
+            });
+            $("#dos").click(function () {
+                $("#caja").removeClass();
+		        $("#caja").addClass('dos');
+            });
+            $("#tres").click(function () {
+                $("#caja").removeClass();
+		        $("#caja").addClass('tres');
+            });
+            $("#cuatro").click(function () {
+                $("#caja").removeClass();
+		        $("#caja").addClass('cuatro');
+            });
+            $("#cinco").click(function () {
+                $("#caja").removeClass();
+		        $("#caja").addClass('cinco');
+            });
+            $("#seis").click(function () {
+                $("#caja").removeClass();
+		        $("#caja").addClass('seis');
+            });
+            $("#siete").click(function () {
+                $("#caja").removeClass();
+		        $("#caja").addClass('siete');
+            });
+            $("#restaurar").click(function () {
+                
+                $("#caja").toggleClass('caja');
+                $(".caja").css('background-color', 'red');
+                $(".caja").css('border-color', 'red');
+                    $(".caja").css('height', '200px');
+                    $(".caja").css('width', '200px');
+            });
+            $("#cambiar").click(function () {
+                $(".caja").css('background-color', $("#fondo").val());
+                $(".caja").css('border-color', $("#borde").val());
+                    $(".caja").css('height', $("#alto").val() + 'px');
+                    $(".caja").css('width', $("#ancho").val() + 'px');
+                
+            });
+        });
+    </script>
+</body>
+
+</html>
