@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cajas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        .caja{
+        border: 1px solid #900;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        }
+        </style>
+</head>
+<body>
+    <section>
+        <h1>título</h1>
+        <div class="caja"><p>abajo</p></div>
+        <div class="caja"><p>centro</p></div>
+        <div class="caja"><p>arriba</p></div>
+        </section>
+    <script>
+        $(document).ready(function () {
+            $(".caja").first().next().remove();
+            //$("body").find("section").before($("body").find("h1"));
+            $("h1").prev("section");
+            $("body").last(".caja").before($("body").first(".caja"));
+            $(".caja").first().css({'background-color':'black','color':'white'});
+        });
+    </script>
+</body>
+</html>
