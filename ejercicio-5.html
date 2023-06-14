@@ -25,10 +25,13 @@
         </section>
     <script>
         $(document).ready(function () {
+            //se elimina el elemento siguiente al primero con la clase caja al ser solo tres elementos se elimina el del centro
             $(".caja").first().next().remove();
+            //se busca section en el body y antes de este elemento se agrega el h1 que se busco en el body
             $("body").find("section").before($("body").find("h1"));
-            $("h1").prev("section");
+            //del body selecciono la ultima caja y se agrega antes de la primera
             $("body").last(".caja").before($("body").first(".caja"));
+            //se le da un estilo al primer elemento con la clase caja el cual anteriormente era el ultimo elemento
             $(".caja").first().css({'background-color':'black','color':'white'});
         });
     </script>
