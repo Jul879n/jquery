@@ -39,8 +39,11 @@
         <script>
             $(document).ready(function () {
                 $(".caja").click(function () {
+                    //al hacer click se agrega la clase shadow a la caja actual
                     $(this).addClass("shadow");
+                    //al input se le asigna el valor del data-num de la caja actual
                     $("input").val($(this).data("num"));
+                    //al hacer click se elimina el atributo disabled de el boton
                     $("button").removeAttr("disabled");
                 });
             });
