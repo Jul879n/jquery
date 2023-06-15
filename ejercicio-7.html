@@ -10,6 +10,7 @@
             .caja{
                 width: 200px;
                 height: 200px;
+                cursor: pointer;
             }
         </style>
 </head>
@@ -26,7 +27,7 @@
                 <h2>3</h2>
             </div>
             <form id="formulario" action="" method="get">
-                <input type="text" name="num-div" value="" hidden>
+                <input type="hidden" name="num-div" value="">
                 <button class="btn btn-primary" type="submit" disabled>Enviar</button>
             </form>
             
@@ -38,6 +39,7 @@
         <script>
             $(document).ready(function () {
                 $(".caja").click(function () {
+                    $(this).addClass("shadow");
                     $("input").val($(this).data("num"));
                     $("button").removeAttr("disabled");
                 });
