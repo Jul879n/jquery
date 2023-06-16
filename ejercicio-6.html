@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,89 +78,108 @@
 
         .tarde {
             background: rgb(247, 174, 6);
-            background: linear-gradient(180deg, rgba(247, 174, 6, 1) 0%, rgba(0, 0, 0, 1) 100%);
+
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .portada {
+            background-image: url(seis/assets/img/portada.png);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             height: 100vh;
+            z-index: 19;
+        }
+        .portada span{
+            font-size: 8rem;
+            font-weight: 900;
+            color: slateblue;
+        }
+        .card{
+            border: 4px solid #130606;
         }
     </style>
 </head>
-
 <body class="noche">
+    <div class="portada d-flex justify-content-center align-items-center">
+        <span>"La Historia de un día"</span>
+    </div>
     <div class="container mt-5">
-        <div class="esfera luna"></div>
-        <h1 class="text-light">"La Historia de un día"</h1>
+        <div class="esfera luna shadow"></div>
+        <h1 class="text-light"></h1>
         <div id="botonera" class="row mt-5 justify-content-center ">
-            <div id="boton" class="border bg-white abajo p-3 rounded-3 position-fixed shadow">
-                <button class="btn btn-primary m-2" id="siguiente">Siguiente</button>
+            <div id="boton" class="abajo p-3 position-fixed d-flex justify-content-end">
+                <button class="btn btn-dark m-5" id="siguiente">Empezar</button>
             </div>
             <div id="caja-uno" class="col-11 col-sm-4 position-fixed caja">
-                <div class="card ">
-                    <img class="card-img" src="" alt="">
+                <div class="card  ">
+                    <img class="card-img" src="seis/assets/img/despertar.png" alt="un hombre despertando">
                     <div class="card-body">
-                        <h2>Despertar</h2>
+                        <h2>08:30 AM</h2>
                         <p>Me despierto temprano y me levanto de la cama.</p>
                     </div>
                 </div>
             </div>
             <div id="caja-dos" class="col-11 col-sm-4 position-fixed caja">
-                <div class="card ">
-                    <img class="card-img" src="" alt="">
+                <div class="card  ">
+                    <img class="card-img" src="seis/assets/img/desayuno.png" alt="un plato con el desayuno y una taza de cafe">
                     <div class="card-body">
-                        <h2>Desayuno</h2>
-                        <p>Preparo un cafe caliente y un pan con queso.</p>
+                        <h2>10:00 AM</h2>
+                        <p>Me preparo un cafe caliente y un pan con queso.</p>
                     </div>
                 </div>
             </div>
             <div id="caja-tres" class="col-11 col-sm-4 position-fixed caja">
-                <div class="card ">
-                    <img class="card-img" src="" alt="">
+                <div class="card  ">
+                    <img class="card-img" src="seis/assets/img/almuerzo.png" alt="una persona comiendo su almuerzo">
                     <div class="card-body">
-                        <h2>Me levanto</h2>
-                        <p>Tomo una ducha y me visto.</p>
+                        <h2>13:20 PM</h2>
+                        <p>Me como mi almuerzo el cual no siempre es rico.</p>
                     </div>
                 </div>
             </div>
             <div id="caja-cuatro" class="col-11 col-sm-4 position-fixed caja">
-                <div class="card ">
-                    <img class="card-img" src="" alt="">
+                <div class="card  ">
+                    <img class="card-img" src="seis/assets/img/estudio.png" alt="una persona que esta estudiando html y php">
                     <div class="card-body">
-                        <h2>Estudio</h2>
-                        <p>Me voy a caminando a toar clases.</p>
+                        <h2>02:30 PM</h2>
+                        <p>Durante la tarde me dedico a estudiar.</p>
                     </div>
                 </div>
             </div>
             <div id="caja-cinco" class="col-11 col-sm-4 position-fixed caja">
-                <div class="card ">
-                    <img class="card-img" src="" alt="">
+                <div class="card  ">
+                    <img class="card-img" src="seis/assets/img/cena.png" alt="dos personas cenando en una mesa">
                     <div class="card-body">
-                        <h2>Cena</h2>
+                        <h2>08:00 PM</h2>
                         <p>Ceno con mi hermano despues de clases.</p>
                     </div>
                 </div>
             </div>
             <div id="caja-seis" class="col-11 col-sm-4 position-fixed caja">
-                <div class="card ">
-                    <img class="card-img" src="" alt="">
+                <div class="card  ">
+                    <img class="card-img" src="seis/assets/img/jugar.png" alt="una persona jugando videojuegos">
                     <div class="card-body">
-                        <h2>Pendientes</h2>
-                        <p>Hago las tareas pendientes o estudio si es necesario</p>
+                        <h2>09:30 PM</h2>
+                        <p>Me pongo a jugar para despejar la mente</p>
                     </div>
                 </div>
             </div>
             <div id="caja-siete" class="col-11 col-sm-4 position-fixed caja">
-                <div class="card ">
-                    <img class="card-img" src="" alt="">
+                <div class="card  ">
+                    <img class="card-img" src="seis/assets/img/descanso.png" alt="una persona que esta acostada en su cama">
                     <div class="card-body">
-                        <h2>Descanso</h2>
+                        <h2>01:00 AM</h2>
                         <p>Me acuesto para poder dormir y descansar.</p>
                     </div>
                 </div>
             </div>
-            <div class="mensaje">
-                <span>FIN</span>
-            </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
@@ -169,40 +187,65 @@
         $(document).ready(function () {
             //se ocultan todas las cajas
             $(".caja").hide();
-            $(".mensaje").hide();
+            $(".caja h2").hide();
+            //se crea una variable que almacena la posicion de la caja
             var posicion = 0;
             $("#siguiente").click(function () {
-                $("h1").fadeOut("slow", function () {
-                    $(this).text($(".caja").eq(posicion-1).find("h2").text()).fadeIn("slow");
+                //se cambia el texto del boton
+                $(this).text("Siguiente");
+                //se oculta la portada
+                $(".portada").fadeOut(3000, function () {
+                    $(this).remove();
                 });
+                //se oculta el h1 y se muestra el h2 de la caja
+                $("h1").fadeOut("slow", function () {
+                    $(this).text($(".caja").eq(posicion - 1).find("h2").text()).fadeIn("slow");
+                });
+                //se muestra la caja actual
                 $(".caja").eq(posicion).toggle('fast', 'swing').animate({
-                    bottom: '50%', opacity: '1'
+                    bottom: '30%', opacity: '1'
                 }, 1500);
+                //se aumenta la posicion por cada click en siguiente
                 posicion++;
+                //se detiene la animacion de la esfera entre la posicion 2 y 5
                 if (posicion >= 2 && posicion <= 5) {
                     $(".esfera").stop();
+                    //se detiene la animacion de la esfera entre la posicion 7 y la ultima
                 } else if (posicion >= 7) {
                     $(".esfera").stop();
                 }
+                //se anima la esfera en cualquier otra posicion
                 else {
+                    //se mueva la esfera hacia la derecha
                     $(".esfera").animate({ right: "-10%" }, 1000, function () {
+                        //se cambia la clase de la esfera
+                        //se le asigna un estilo
+                        //termina la animacion al tener un 15% de margen a la derecha
                         $(this).toggleClass("luna sol").css({ right: "100%", left: "auto" }).animate({ right: "15%" }, 1000);
                     });
                 }
+                //si la posicion es menor a 4 se le asigna la clase dia
                 if (posicion < 4) {
-                    $("body").removeClass("tarde noche").addClass("dia");
+                    $("body").removeClass("tarde noche").addClass("dia").fadeIn("slow");
+                    //si la posicion es menor a 6 se le asigna la clase tarde
                 } else if (posicion < 6) {
                     $("body").removeClass("dia noche").addClass("tarde");
+                    //en cualquier otra posicion se le asigna la clase noche
                 } else {
                     $("body").removeClass("dia tarde").addClass("noche");
                 }
+                //si la posicion es mayor a 7 se vacia el body
                 if (posicion > 7) {
-                    $("#botonera").hide();
-                    $(".caja").hide();  
+                    $("body").empty();
+                    //se agrega un div con la clase portada
+                    $("body").append("<div class='portada d-flex justify-content-center align-items-center'><span>Fin</span></div>");
+                    //se oculta la portada
+                    $(".portada").hide();
+                    //se muestra la portada
+                    $(".portada").fadeIn(2000);
                 }
             });
         });
     </script>
 </body>
-
 </html>
