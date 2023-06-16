@@ -1,47 +1,208 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ejercicio 6 jQuery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <style>
-        #caja-uno{
+        #caja-uno {
             z-index: 0;
         }
-        #boton{
+
+        #caja-dos {
+            z-index: 1;
+        }
+
+        #caja-tres {
+            z-index: 2;
+        }
+
+        #caja-cuatro {
+            z-index: 3;
+        }
+
+        #caja-cinco {
+            z-index: 4;
+        }
+
+        #caja-seis {
+            z-index: 5;
+        }
+
+        #caja-siete {
+            z-index: 6;
+        }
+
+        #boton {
             z-index: 20;
         }
-        .abajo{
-                bottom:0px;
-            }
+
+        .abajo {
+            bottom: 0px;
+        }
+
+        .caja {
+            bottom: 0px;
+        }
+
+        .luna {
+            position: absolute;
+            right: 15%;
+            top: 5%;
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+            border-radius: 100%;
+        }
+
+        .sol {
+            position: absolute;
+            right: 15%;
+            top: 5%;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 100%;
+        }
+
+        .noche {
+            background-color: #1B3059;
+        }
+
+        .dia {
+            background-color: cornflowerblue;
+        }
+
+        .tarde {
+            background: rgb(247, 174, 6);
+            background: linear-gradient(180deg, rgba(247, 174, 6, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            height: 100vh;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>La Historia de un día</h1>
-        <div class="row mt-5 justify-content-center">
+
+<body class="noche">
+    <div class="container mt-5">
+        <div class="esfera luna"></div>
+        <h1 class="text-light">"La Historia de un día"</h1>
+        <div id="botonera" class="row mt-5 justify-content-center ">
             <div id="boton" class="border bg-white abajo p-3 rounded-3 position-fixed shadow">
                 <button class="btn btn-primary m-2" id="siguiente">Siguiente</button>
             </div>
-            <div id="caja-uno" class="col-11 col-sm-4 position-fixed abajo">
-                <div class="card caja">
+            <div id="caja-uno" class="col-11 col-sm-4 position-fixed caja">
+                <div class="card ">
                     <img class="card-img" src="" alt="">
                     <div class="card-body">
-                        <h2>hola</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem neque, doloribus vel modi officia earum sunt provident veniam non alias assumenda laborum asperiores deserunt sequi distinctio optio reprehenderit, amet voluptate.</p>
+                        <h2>Despertar</h2>
+                        <p>Me despierto temprano y me levanto de la cama.</p>
                     </div>
                 </div>
             </div>
+            <div id="caja-dos" class="col-11 col-sm-4 position-fixed caja">
+                <div class="card ">
+                    <img class="card-img" src="" alt="">
+                    <div class="card-body">
+                        <h2>Desayuno</h2>
+                        <p>Preparo un cafe caliente y un pan con queso.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="caja-tres" class="col-11 col-sm-4 position-fixed caja">
+                <div class="card ">
+                    <img class="card-img" src="" alt="">
+                    <div class="card-body">
+                        <h2>Me levanto</h2>
+                        <p>Tomo una ducha y me visto.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="caja-cuatro" class="col-11 col-sm-4 position-fixed caja">
+                <div class="card ">
+                    <img class="card-img" src="" alt="">
+                    <div class="card-body">
+                        <h2>Estudio</h2>
+                        <p>Me voy a caminando a toar clases.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="caja-cinco" class="col-11 col-sm-4 position-fixed caja">
+                <div class="card ">
+                    <img class="card-img" src="" alt="">
+                    <div class="card-body">
+                        <h2>Cena</h2>
+                        <p>Ceno con mi hermano despues de clases.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="caja-seis" class="col-11 col-sm-4 position-fixed caja">
+                <div class="card ">
+                    <img class="card-img" src="" alt="">
+                    <div class="card-body">
+                        <h2>Pendientes</h2>
+                        <p>Hago las tareas pendientes o estudio si es necesario</p>
+                    </div>
+                </div>
+            </div>
+            <div id="caja-siete" class="col-11 col-sm-4 position-fixed caja">
+                <div class="card ">
+                    <img class="card-img" src="" alt="">
+                    <div class="card-body">
+                        <h2>Descanso</h2>
+                        <p>Me acuesto para poder dormir y descansar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mensaje">
+                <span>FIN</span>
+            </div>
         </div>
     </div>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            
+            //se ocultan todas las cajas
+            $(".caja").hide();
+            $(".mensaje").hide();
+            var posicion = 0;
+            $("#siguiente").click(function () {
+                $("h1").fadeOut("slow", function () {
+                    $(this).text($(".caja").eq(posicion-1).find("h2").text()).fadeIn("slow");
+                });
+                $(".caja").eq(posicion).toggle('fast', 'swing').animate({
+                    bottom: '500px', opacity: '1'
+                }, 1500);
+                posicion++;
+                if (posicion >= 2 && posicion <= 5) {
+                    $(".esfera").stop();
+                } else if (posicion >= 7) {
+                    $(".esfera").stop();
+                }
+                else {
+                    $(".esfera").animate({ right: "-10%" }, 1000, function () {
+                        $(this).toggleClass("luna sol").css({ right: "100%", left: "auto" }).animate({ right: "15%" }, 1000);
+                    });
+                }
+                if (posicion < 4) {
+                    $("body").removeClass("tarde noche").addClass("dia");
+                } else if (posicion < 6) {
+                    $("body").removeClass("dia noche").addClass("tarde");
+                } else {
+                    $("body").removeClass("dia tarde").addClass("noche");
+                }
+                if (posicion > 7) {
+                    $("#botonera").hide();
+                    $(".caja").hide();  
+                }
+            });
         });
     </script>
 </body>
+
 </html>
