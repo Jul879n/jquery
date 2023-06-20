@@ -25,8 +25,8 @@
         $(document).ready(function () {
             $("#cargar").click(function (e) {
                 $("#destino").load("../php/productos.php .row");
-                $("img").attr("src", "../php/" + $(this).attr("src"));
             });
+            $("img").attr("src", "../php/" + $(this).attr("src"));
         });
     </script>
 </body>
