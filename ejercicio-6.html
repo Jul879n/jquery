@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,31 +10,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <style>
         #caja-uno {
-            z-index: 0;
-        }
-
-        #caja-dos {
-            z-index: 1;
-        }
-
-        #caja-tres {
             z-index: 2;
         }
 
-        #caja-cuatro {
+        #caja-dos {
             z-index: 3;
         }
 
-        #caja-cinco {
+        #caja-tres {
             z-index: 4;
         }
 
-        #caja-seis {
+        #caja-cuatro {
             z-index: 5;
         }
 
-        #caja-siete {
+        #caja-cinco {
             z-index: 6;
+        }
+
+        #caja-seis {
+            z-index: 7;
+        }
+
+        #caja-siete {
+            z-index: 8;
         }
 
         #boton {
@@ -56,6 +57,7 @@
             height: 100px;
             background-color: aliceblue;
             border-radius: 100%;
+            z-index: 0;
         }
 
         .sol {
@@ -66,6 +68,7 @@
             height: 100px;
             background-color: yellow;
             border-radius: 100%;
+            z-index: 0;
         }
 
         .noche {
@@ -94,19 +97,125 @@
             height: 100vh;
             z-index: 19;
         }
-        .portada span{
+
+        .portada span {
             font-size: 8rem;
             font-weight: 900;
             color: slateblue;
         }
-        .card{
-            border: 4px solid #130606;
+        .nube {
+            position: absolute;
+            width: 388px;
+            height: 200px;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        #nube-dos {
+            top: 20%;
+            left: 20%;
+        }
+
+        #nube-tres {
+            top: 30%;
+            left: 5%;
+        }
+        #nube-cuatro{
+            top: 50%;
+            left: 50%;
+        }
+
+        .nube .base {
+            position: absolute;
+            width: 100%;
+            height: 42%;
+            background-color: white;
+            bottom: 0;
+            border-radius: 90px 90px 90px 90px;
+        }
+
+        .nube .medio {
+            position: absolute;
+            width: 8em;
+            height: 8em;
+            background-color: white;
+            bottom: 10%;
+            left: 10%;
+        }
+
+        .nube .arriba {
+            position: absolute;
+            width: 10em;
+            height: 11em;
+            background-color: white;
+            bottom: 10%;
+            right: 30%;
+        }
+
+        .nube .derecha {
+            position: absolute;
+            width: 6em;
+            height: 8em;
+            background-color: white;
+            bottom: 10%;
+            right: 15%;
+        }
+
+        .nube .final {
+            position: absolute;
+            width: 6em;
+            height: 5em;
+            background-color: white;
+            bottom: 8%;
+            right: 0;
+        }
+
+        .pajaro {
+            position: absolute;
+            width: 200px;
+            height: auto;
+            z-index: 0;
+            left: 500px;
+            top: 20%;
+            z-index: 1;
         }
     </style>
 </head>
+
 <body class="noche">
     <div class="portada d-flex justify-content-center align-items-center">
         <span>"La Historia de un día"</span>
+    </div>
+    <div class="nube">
+        <div class="base"></div>
+        <div class="medio rounded-circle"></div>
+        <div class="arriba rounded-circle"></div>
+        <div class="derecha rounded-circle"></div>
+        <div class="final rounded-circle"></div>
+    </div>
+    <div id="nube-dos" class="nube">
+        <div class="base"></div>
+        <div class="medio rounded-circle"></div>
+        <div class="arriba rounded-circle"></div>
+        <div class="derecha rounded-circle"></div>
+        <div class="final rounded-circle"></div>
+    </div>
+    <div id="nube-tres" class="nube">
+        <div class="base"></div>
+        <div class="medio rounded-circle"></div>
+        <div class="arriba rounded-circle"></div>
+        <div class="derecha rounded-circle"></div>
+        <div class="final rounded-circle"></div>
+    </div>
+    <div id="nube-cuatro" class="nube">
+        <div class="base"></div>
+        <div class="medio rounded-circle"></div>
+        <div class="arriba rounded-circle"></div>
+        <div class="derecha rounded-circle"></div>
+        <div class="final rounded-circle"></div>
+    </div>
+    <div class="pajaro">
+        <img class="w-100" src="seis/assets/img/pajaros.gif" alt="">
     </div>
     <div class="container mt-5">
         <div class="esfera luna shadow"></div>
@@ -126,7 +235,8 @@
             </div>
             <div id="caja-dos" class="col-11 col-sm-4 position-fixed caja">
                 <div class="card  ">
-                    <img class="card-img" src="seis/assets/img/desayuno.jpg" alt="un plato con el desayuno y una taza de cafe">
+                    <img class="card-img" src="seis/assets/img/desayuno.jpg"
+                        alt="un plato con el desayuno y una taza de cafe">
                     <div class="card-body">
                         <h2>10:00 AM</h2>
                         <p>Me preparo un café caliente y un pan con queso.</p>
@@ -144,7 +254,8 @@
             </div>
             <div id="caja-cuatro" class="col-11 col-sm-4 position-fixed caja">
                 <div class="card  ">
-                    <img class="card-img" src="seis/assets/img/estudio.jpg" alt="una persona que esta estudiando html y php">
+                    <img class="card-img" src="seis/assets/img/estudio.jpg"
+                        alt="una persona que esta estudiando html y php">
                     <div class="card-body">
                         <h2>02:30 PM</h2>
                         <p>Durante la tarde me dedico a estudiar.</p>
@@ -171,7 +282,8 @@
             </div>
             <div id="caja-siete" class="col-11 col-sm-4 position-fixed caja">
                 <div class="card  ">
-                    <img class="card-img" src="seis/assets/img/descanso.jpg" alt="una persona que esta acostada en su cama">
+                    <img class="card-img" src="seis/assets/img/descanso.jpg"
+                        alt="una persona que esta acostada en su cama">
                     <div class="card-body">
                         <h2>01:00 AM</h2>
                         <p>Me acuesto para poder dormir y descansar.</p>
@@ -191,6 +303,35 @@
             //se crea una variable que almacena la posicion de la caja
             var posicion = 0;
             $("#siguiente").click(function () {
+                function movObjeto() {
+                    $('.nube').animate({ left: $('.nube').parent().width() }, 12000, 'linear', function () {
+                        // Reiniciar la posición del elemento cuando llega al final
+                        $('.nube').css('left', '-30%');
+                        movObjeto();
+                    });
+                    $('#nube-dos').animate({ left: $('#nube-dos').parent().width() }, 10000, 'linear', function () {
+                        // Reiniciar la posición del elemento cuando llega al final
+                        $('#nube-dos').css('left', '-30%');
+                        movObjeto();
+                    });
+                    $('#nube-tres').animate({ left: $('#nube-dos').parent().width() }, 15000, 'linear', function () {
+                        // Reiniciar la posición del elemento cuando llega al final
+                        $('#nube-tres').css('left', '-30%');
+                        movObjeto();
+                    });
+                    $('#nube-cuatro').animate({ left: $('#nube-dos').parent().width() }, 18000, 'linear', function () {
+                        // Reiniciar la posición del elemento cuando llega al final
+                        $('#nube-cuatro').css('left', '-30%');
+                        movObjeto();
+                    });
+                    $('.pajaro').animate({ left: $('.pajaro').parent().width() }, 9000, 'linear', function () {
+                        // Reiniciar la posición del elemento cuando llega al final
+                        $('.pajaro').css('left', '-30%');
+                        movObjeto();
+                    });
+
+                }
+                movObjeto();
                 //se cambia el texto del boton
                 $(this).text("Siguiente");
                 //se oculta la portada
@@ -233,6 +374,7 @@
                     //en cualquier otra posicion se le asigna la clase noche
                 } else {
                     $("body").removeClass("dia tarde").addClass("noche");
+                    $(".pajaro").hide();
                 }
                 //si la posicion es mayor a 7 se vacia el body
                 if (posicion > 7) {
@@ -248,4 +390,5 @@
         });
     </script>
 </body>
+
 </html>
